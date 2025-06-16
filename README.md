@@ -33,7 +33,7 @@ Follow these steps to set up the project locally.
 git clone https://github.com/your-username/todo-app.git
 cd todo-app
 
-### 2️⃣ 2️⃣ Install dependencies
+### 2️⃣ Install dependencies
 # Install frontend dependencies
 cd client
 npm install
