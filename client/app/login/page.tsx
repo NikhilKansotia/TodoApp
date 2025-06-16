@@ -27,7 +27,7 @@ const Login = () => {
   const mutation = useMutation({
     mutationFn: (data: FormData) =>
       APIRequest({
-        url: `${login}`,
+        url: `/api/user/login`,
         data: { ...data },
         additionalInfo: { credentials: "include" },
       }),
