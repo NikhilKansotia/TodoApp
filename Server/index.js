@@ -11,7 +11,7 @@ import isAuthenticted from "./middlewares/authMiddleware.js";
 
 dotenv.config();
 const app = express();
-const PORT = process.env.PORT_NO;
+const PORT = process.env.PORT_NO || 8000;
 
 //middelwares
 app.use(morgan("dev"));
