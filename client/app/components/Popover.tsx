@@ -43,6 +43,7 @@ function Popover({ isPopoverOpen, setIsPopoverOpen, task }: PopoverProps) {
     onSuccess: (res) => {
       toast.success(res.message);
       queryClient.invalidateQueries({ queryKey: ["todos"] });
+      setIsPopoverOpen(false);
     },
     onError: (err) => toast.error(err.message),
   });
