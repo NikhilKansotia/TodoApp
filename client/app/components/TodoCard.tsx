@@ -91,8 +91,9 @@ function TodoCard() {
         <button
           type="submit"
           className="w-full bg-blue-500 mt-5 rounded-md p-2 text-lg text-white cursor-pointer hover:bg-blue-700"
+          disabled={mutation.isPending}
         >
-          Add todo
+          {mutation.isPending ? "Wait" : "Add todo"}
         </button>
       </form>
     </div>

@@ -1,5 +1,5 @@
-const USER_BASE_URL = `${process.env.NEXT_PUBLIC_BASE_URL}/user`;
-const TODO_BASE_URL = `${process.env.NEXT_PUBLIC_BASE_URL}/todo`;
+const USER_BASE_URL = `/api/user`;
+const TODO_BASE_URL = `/api/todo`;
 
 export const signup = `${USER_BASE_URL}/signup`;
 export const login = `${USER_BASE_URL}/login`;

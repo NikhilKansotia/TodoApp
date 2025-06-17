@@ -124,12 +124,14 @@ function Popover({ isPopoverOpen, setIsPopoverOpen, task }: PopoverProps) {
                 type="button"
                 className="px-4 py-2 bg-red-600 w-full text-white rounded hover:bg-red-700 cursor-pointer"
                 onClick={handleDelete}
+                disabled={deleteMutation.isPending}
               >
                 {deleteMutation.isPending ? "Deleting..." : "Delete"}
               </button>
               <button
                 className="px-4 py-2 bg-blue-600 w-full text-white rounded hover:bg-blue-700 cursor-pointer"
                 type="submit"
+                disabled={updateMutation.isPending}
               >
                 {updateMutation.isPending ? "Updating..." : "Update"}
               </button>

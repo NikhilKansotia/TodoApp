@@ -130,8 +130,9 @@ const Signup = () => {
         <button
           type="submit"
           className="w-full py-2 font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700 transition duration-200"
+          disabled={mutation.isPending}
         >
-          Sign Up
+          {mutation.isPending ? "Wait" : "Sign Up"}
         </button>
       </form>
     </div>

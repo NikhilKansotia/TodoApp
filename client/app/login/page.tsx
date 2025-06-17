@@ -1,6 +1,6 @@
 "use client";
 
-// import { login } from "@/utils/APIs";
+import { login } from "@/utils/APIs";
 import { APIRequest } from "@/utils/networkCalls";
 import { useMutation } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
@@ -27,7 +27,7 @@ const Login = () => {
   const mutation = useMutation({
     mutationFn: (data: FormData) =>
       APIRequest({
-        url: `/api/user/login`,
+        url: `${login}`,
         data: { ...data },
         additionalInfo: { credentials: "include" },
       }),
@@ -105,8 +105,9 @@ const Login = () => {
         <button
           type="submit"
           className="w-full py-2 font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700 transition duration-200"
+          disabled={mutation.isPending}
         >
-          Login
+          {mutation.isPending ? "Wait" : "Login"}
         </button>
       </form>
     </div>
